@@ -1,0 +1,11 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: linear-gradient(135deg, #219ebc, #8ecae6);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}

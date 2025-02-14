@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #219ebc, #8ecae6);
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .home-image-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: absolute;
+
+    img {
+        width: 100%; 
+        max-width: 100vw; 
+        height: auto; 
+        display: block;
+        object-fit: cover;
+        opacity: 0.4; 
+    }
+}
+
+  
+  .home-text {
+    max-width: 600px;
+    margin-bottom: 30px;
+    z-index: 10000;
+    
+    h1 {
+      font-size: 5.5rem;
+      font-weight: bold;
+      text-shadow: 4px 4px 14px rgba(0, 0, 0, 0.6);
+      animation: slideDown 1s ease-in-out;
+      -webkit-text-stroke: 4px #ff6700;
+      color: white; 
+      text-shadow: none; 
+      
+    }
+    h1:hover {
+        color: #ff6700;
+        opacity: 1.4;
+        cursor: pointer;
+    }
+  
+    p {
+      font-size: 2rem;
+      margin-top: 10px;
+      text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.8);
+      opacity: 0.9;
+      animation: fadeIn 1.5s ease-in-out;
+      color: white;
+    }
+  }
+  
+  .home-buttons {
+    display: flex;
+    gap: 30px;
+  
+    .button-login, .button-list {
+      padding: 16px 28px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .button-login {
+      background: #ffb703;
+      color: #023047;
+    }
+  
+    .button-list {
+      background: #fb8500;
+      color: #fff;
+    }
+  
+    .button-login:hover {
+      transform: scale(1.1);
+      background: #ff9f1c;
+    }
+  
+    .button-list:hover {
+      transform: scale(1.1);
+      background: #ff6700;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-text h1 {
+      font-size: 2rem;
+    }
+  
+    .home-text p {
+      font-size: 1rem;
+    }
+  
+    .home-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .button-login, .button-list {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,214 @@
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #343a40;
+    color: #f8f9fa;
+  
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem;
+      background-color: #495057;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  
+      button.add-button,
+      input,
+      select {
+        padding: 0.4rem 0.8rem;
+        border: 1px solid #6c757d;
+        border-radius: 4px;
+        margin: 0 0.4rem;
+        background: #5a6268;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background: #4b5055;
+        }
+      }
+  
+      button.logout {
+        background: #dda15e;
+        color: #fff;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        margin-left: auto;
+        margin-right: 0.4rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background: #bc6c25;
+        }
+      }
+    }
+  
+    table {
+      width: 95%;
+      margin: 1rem auto;
+      border-collapse: collapse;
+      overflow-y: auto;
+      max-height: 70vh;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  
+      thead {
+        background-color: #545b62;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+  
+        th {
+          padding: 0.6rem;
+          text-align: left;
+          border-bottom: 1px solid #6c757d;
+          font-weight: 600;
+          color: #f2f2f2;
+        }
+      }
+  
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #454b50;
+          }
+  
+          &:hover {
+            background-color: #3b4045;
+            transition: background-color 0.3s ease;
+          }
+  
+          td {
+            padding: 0.6rem;
+            text-align: left;
+            border-bottom: 1px solid #6c757d;
+            color: #e9ecef;
+  
+            img {
+              max-width: 30px;
+              height: auto;
+              vertical-align: middle;
+            }
+  
+            button.edit-button {
+              background: #007bff;
+              color: #fff;
+              border: none;
+              padding: 0.3rem 0.6rem;
+              border-radius: 4px;
+              margin: 0 0.1rem;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+  
+              &:hover {
+                background: #0056b3;
+              }
+            }
+  
+            button.delete-button {
+              background: #dc3545;
+              color: #fff;
+              border: none;
+              padding: 0.3rem 0.6rem;
+              border-radius: 4px;
+              margin: 0 0.1rem;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+  
+              &:hover {
+                background: #c12a36;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem;
+      background-color: #495057;
+      border-top: 1px solid #6c757d;
+  
+      button {
+        padding: 0.4rem 0.8rem;
+        border: 1px solid #6c757d;
+        border-radius: 4px;
+        margin: 0 0.4rem;
+        background-color: #5a6268;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #4b5055;
+        }
+  
+        &:disabled {
+          opacity: 0.5;
+          cursor: default;
+        }
+      }
+  
+      span {
+        margin: 0 0.8rem;
+        color: #e9ecef;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    table {
+      width: 100%;
+    }
+
+    .dashboard-header {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .dashboard-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pagination {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    table {
+      font-size: 0.8rem;
+    }
+
+    .dashboard-header button,
+    input,
+    select {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+    .pagination {
+      flex-direction: column;
+      gap: 5px;
+    }
+}
+

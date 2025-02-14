@@ -1,0 +1,99 @@
+.delete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .delete-modal-content {
+        background: #5a6268;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        min-width: 400px;
+        max-width: 90%;
+        animation: slideIn 0.3s ease-in-out;
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #ffffff;
+            transition: color 0.2s;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .delete-modal-card {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .delete-modal-actions {
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                gap: 50px;
+
+                button {
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    border-radius: 5px;
+
+                    &:first-child {
+                        background: #e74c3c;
+                        color: #fff;
+                    }
+                    &:first-child:hover {
+                        background: red;
+                        color:white
+                    }
+
+                    &:last-child {
+                        background: #bdc3c7;
+                    }
+                    &:last-child:hover {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
