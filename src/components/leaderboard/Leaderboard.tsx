@@ -62,9 +62,10 @@ const Leaderboard = () => {
                         <li key={player.scoreId} className={`rank-${index + 1}`}>
                             <span className="rank">#{index + 1}</span>
                             <img 
-                                src={player.user?.profilePictureUrl
-                                    ? ApiConfig.PHOTO_PATH + player.user?.profilePictureUrl
-                                    : defaultAvatar
+                                src={
+                                    typeof player.user?.profilePictureUrl === 'string' 
+                                        ? player.user?.profilePictureUrl 
+                                        : defaultAvatar 
                                 }
                                 alt={player.user?.username} 
                                 className="profile-pic"

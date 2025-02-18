@@ -63,7 +63,7 @@ const FifthGame = ({ onNext }: FifthGameProps) => {
                 <div className="flags-container" key={flag}>
                     <img 
                     key={flag} 
-                    src={ApiConfig.PHOTO_PATH + flag} 
+                    src={flag} 
                     alt="Flag" 
                     onClick={() => checkAnswer(flag)} 
                     />

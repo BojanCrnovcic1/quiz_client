@@ -112,7 +112,7 @@ const AdminDashboard: React.FC = () => {
               <td>{country.capital}</td>
               <td>{country.population}</td>
               <td>
-                {country.flagUrl && <img src={ApiConfig.PHOTO_PATH + country.flagUrl} alt={country.name} width={30} />}
+                {country.flagUrl && <img src={country.flagUrl} alt={country.name} width={30} />}
               </td>
               <td>
                 <button className="edit-button"onClick={() => handleOpenEditModal(country)}>Edit</button>

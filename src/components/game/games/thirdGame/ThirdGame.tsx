@@ -69,7 +69,7 @@ const ThirdGame = ({ onNext }: ThirdGameProps) => {
             {country ? (
                 <>
                     <img 
-                        src={`${ApiConfig.PHOTO_PATH}${country.flagUrl}`} 
+                        src={`${country.flagUrl}`} 
                         alt={`Flag of ${country.name}`} 
                     />
                     <input 
