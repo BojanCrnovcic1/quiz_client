@@ -25,12 +25,18 @@ const Game = () => {
                 <h2>Poeni: {score}</h2>
             </div>
             {gameIndex === 0 && <FirstGame onNext={nextGame} />}
-            {gameIndex === 1 && <SecondGame onNext={nextGame} />}
-            {gameIndex === 2 && <ThirdGame onNext={nextGame} />}
-            {gameIndex === 3 && <FourthGame onNext={nextGame} />}
-            {gameIndex === 4 && <FifthGame onNext={nextGame} />}
-            {gameIndex === 5 && <SixthGame onNext={nextGame} />}
-            {gameIndex === 6 && <EndScreen totalPoints={score} />}
+            {gameIndex === 1 && <FirstGame onNext={nextGame} />}
+            {gameIndex === 2 && <SecondGame onNext={nextGame} />}
+            {gameIndex === 3 && <SecondGame onNext={nextGame} />}
+            {gameIndex === 4 && <ThirdGame onNext={nextGame} />}
+            {gameIndex === 5 && <ThirdGame onNext={nextGame} />}
+            {gameIndex === 6 && <FourthGame onNext={nextGame} />}
+            {gameIndex === 7 && <FourthGame onNext={nextGame} />}
+            {gameIndex === 8 && <FifthGame onNext={nextGame} />}
+            {gameIndex === 9 && <FifthGame onNext={nextGame} />}
+            {gameIndex === 10 && <SixthGame onNext={nextGame} />}
+            {gameIndex === 11 && <SixthGame onNext={nextGame} />}
+            {gameIndex === 12 && <EndScreen totalPoints={score} />}
         </div>
     );
 };
