@@ -59,7 +59,7 @@
             }
         }
 
-        @media only screen and (max-width: 768px) {
+        @media (max-width: 768px) {
             .secound-game-container {
               width: 95%;
               padding: 12px;
@@ -86,7 +86,7 @@
             }
           }
           
-          @media only screen and (max-width: 480px) {
+          @media (max-width: 480px) {
             .secound-game-container {
               width: 98%;
               padding: 10px;
