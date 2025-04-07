@@ -59,10 +59,60 @@
             }
         }
 
-        @media (max-width: 500px) {
-            button {
-                flex: 1 1 100%;
+        @media only screen and (max-width: 768px) {
+            .secound-game-container {
+              width: 95%;
+              padding: 12px;
+              height: auto;
+              max-height: none;
+          
+              h2 {
+                font-size: 1.5rem;
+              }
+          
+              p {
+                font-size: 1rem;
+              }
+          
+              .button-container {
+                max-width: 100%;
+          
+                button {
+                  font-size: 1rem;
+                  padding: 10px 16px;
+                  min-width: 120px;
+                }
+              }
             }
-        }
+          }
+          
+          @media only screen and (max-width: 480px) {
+            .secound-game-container {
+              width: 98%;
+              padding: 10px;
+              height: auto;
+              max-height: none;
+          
+              h2 {
+                font-size: 1.3rem;
+              }
+          
+              p {
+                font-size: 0.95rem;
+              }
+          
+              .button-container {
+                flex-direction: column;
+                gap: 8px;
+          
+                button {
+                  width: 100%;
+                  font-size: 0.95rem;
+                  padding: 10px;
+                  min-width: unset;
+                }
+              }
+            }
+          }          
     }
 }
